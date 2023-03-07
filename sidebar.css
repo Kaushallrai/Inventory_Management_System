@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #ececec;
+  background-color: #ffffff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   width: 240px;
 
@@ -17,7 +17,7 @@
   width: 100%;
   height: 70px;
   padding: 10px 0 10px 10px;
-  background-color: #ececec;
+  background-color: #ffffff;
   margin-bottom: 20px;
 }
 .logo-container h1 {
@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
 
-  background-color: #ececec;
+  background-color: #ffffff;
   height: 40px;
   border-radius: 6px;
 
@@ -76,7 +76,7 @@
 .invoice-container:focus,
 .bill-container:focus,
 .stakeholders-container:focus {
-  background-color: #d1d1d1;
+  background-color: #ececec;
 }
 
 .dashboard-container span {
@@ -126,14 +126,14 @@
 }
 
 .lower-section {
-  background-color: #d1d1d1;
+  background-color: #eaeaea;
   margin-top: 125px;
 
   display: flex;
   align-items: center;
 
   border: #7e7e7e 1px solid;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 .profile-picture img {
   width: 35px;
@@ -157,4 +157,6 @@
 .profile-settings {
   margin-left: auto;
   margin-right: 10px;
+
+  cursor: pointer;
 }

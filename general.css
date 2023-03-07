@@ -6,6 +6,61 @@
 }
 
 body {
-  background-color: #ffffff;
+  margin-top: 120px;
+  margin-left: 245px;
+  background-color: #ececec;
   height: 150vh;
+}
+
+.page-info-stat {
+  background-color: #ffffff;
+  height: 55px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 61px;
+  left: 240px;
+  right: 0;
+  z-index: 1;
+}
+.left-info {
+  width: fit-content;
+  margin: 0 30px;
+  font-size: 19px;
+}
+.right-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 350px;
+  font-size: 12px;
+  margin-right: 35px;
+}
+.month,
+.year,
+.recent-activities {
+  height: 30px;
+  padding: 0 10px;
+  border: #4c4c4c 1px solid;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+.month:hover,
+.year:hover,
+.recent-activities:hover {
+  background-color: #fafafa;
+  transform: scale(1.01);
+}
+.recent-activities i {
+  margin-left: 5px;
 }

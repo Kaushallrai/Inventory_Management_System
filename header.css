@@ -1,6 +1,6 @@
 .header {
   background-color: #ffffff;
-  height: 55px;
+  height: 60px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -69,8 +69,8 @@
 }
 
 .refresh-button-container:hover {
+  background-color: #fafafa;
   transform: scale(1.02);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .refresh-button-container i {
