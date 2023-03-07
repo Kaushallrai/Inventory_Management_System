@@ -1,15 +1,23 @@
 .header {
   background-color: #ffffff;
-  height: 50px;
+  height: 55px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 240px;
+  right: 0;
+  z-index: 1;
 }
 .left-section {
-  width: 400px;
-  height: 30px;
+  width: 500px;
+  height: 32px;
   padding: 10px;
+  margin: 10px 25px;
   background-color: #ffffff;
   border: #ababab 1px solid;
   border-radius: 30px;
@@ -40,8 +48,9 @@
   align-items: center;
   justify-content: space-between;
 
-  min-width: 220px;
+  min-width: 260px;
   padding: 0 10px;
+  margin-right: 20px;
 }
 
 .refresh-button-container {
@@ -53,8 +62,8 @@
   width: 80px;
   height: 30px;
   padding: 0 6px;
-  border: #000000 1px solid;
-  border-radius: 30px;
+  border: #4c4c4c 1px solid;
+  border-radius: 5px;
 
   cursor: pointer;
 }
@@ -66,12 +75,14 @@
 
 .refresh-button-container i {
   font-size: 12px;
+  color: #4c4c4c;
 }
 
 .refresh-button-container button {
   background-color: white;
   border: none;
   outline: none;
+  color: #4c4c4c;
 
   font-size: 12px;
   font-weight: 500;
@@ -79,10 +90,16 @@
 
 .notifications-icon-container {
   position: relative;
+  cursor: pointer;
 }
 .notifications-icon-container i {
   font-size: 20px;
+  color: #4c4c4c;
 }
+.notifications-icon-container:hover {
+  transform: scale(1.1);
+}
+
 .notifications-icon-container::after {
   content: attr(current-count);
   position: absolute;
@@ -97,6 +114,7 @@
   border: #ffffff 1px solid;
   font-size: 8px;
   margin-right: 4px;
+  font-weight: bold;
 
   display: flex;
   align-items: center;
@@ -104,8 +122,19 @@
 }
 .date-icon-container {
   font-size: 20px;
+  color: #4c4c4c;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.date-icon-container:hover {
+  transform: scale(1.1);
 }
 .settings-icon-container span {
   font-size: 24px;
   padding-top: 5px;
+  color: #4c4c4c;
+  cursor: pointer;
+}
+.settings-icon-container span:hover {
+  transform: scale(1.1);
 }

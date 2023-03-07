@@ -15,8 +15,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..100,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"
+    />
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./general.css" />
+    <link rel="stylesheet" href="./sidebar.css" />
   </head>
   <body>
     <div class="container">
@@ -44,12 +63,66 @@
         </div>
       </div>
       <div class="main-content"></div>
-      <div class="sidebar"></div>
+      <div class="sidebar">
+        <div class="logo-container">
+          <h1>StockPilot_</h1>
+        </div>
+        <div class="top-header"><p>Menu</p></div>
+
+        <div class="sidebar-section-container">
+          <div class="upper-section">
+            <div class="dashboard-container" tabindex="0">
+              <span class="material-symbols-outlined"> home </span>
+              <p>Dashboard</p>
+            </div>
+
+            <div class="users-container" tabindex="0">
+              <i class="fa-regular fa-user"></i>
+              <p>Users</p>
+            </div>
+          </div>
+
+          <div class="middle-section">
+            <div class="mid-header"><p>Market</p></div>
+            <div class="inventory-container" tabindex="0">
+              <span class="material-symbols-outlined"> deployed_code </span>
+              <p>Inventory</p>
+            </div>
+
+            <div class="purchase-container" tabindex="0">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <p>Purchase</p>
+            </div>
+
+            <div class="sales-container" tabindex="0">
+              <i class="fa-solid fa-money-bill-trend-up"></i>
+              <p>Sales</p>
+            </div>
+
+            <div class="invoice-container" tabindex="0">
+              <i class="fa-solid fa-file-invoice"></i>
+              <p>Invoice</p>
+            </div>
+
+            <div class="bill-container" tabindex="0">
+              <i class="fa-solid fa-receipt"></i>
+              <p>Bill</p>
+            </div>
+
+            <div class="stakeholders-container" tabindex="0">
+              <span class="material-symbols-outlined"> groups </span>
+              <p>Stakeholders</p>
+            </div>
+          </div>
+          <div class="lower-section"></div>
+        </div>
+      </div>
       <div class="footer"></div>
     </div>
     <script
       src="https://kit.fontawesome.com/5341c54a83.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
