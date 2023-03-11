@@ -304,39 +304,40 @@ hr {
   }
 } */
 .recent-sales,
-.recent-orders {
+.latest-orders {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .recent-sales-overview,
-.recent-orders-overview {
+.latest-orders-overview {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 .recent-sales-overview p,
-.recent-orders-overview p {
+.latest-orders-overview p {
   font-size: 16px;
   font-weight: 500;
   margin: 4px 0 2px 0;
 }
 .recent-sales-overview h5,
-.recent-orders-overview h5 {
+.latest-orders-overview h5 {
   font-size: 12px;
   font-weight: 500;
   margin: 4px 0 2px 0;
   color: #6e6e6e;
 }
 .recent-sales-overview h5:hover,
-.recent-orders-overview h5:hover {
+.latest-orders-overview h5:hover {
   color: #3a3a3a;
   cursor: pointer;
   text-decoration: underline;
 }
 .recent-sales-activity,
-.recent-orders-activity {
+.latest-orders-activity {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -362,7 +363,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 50%;
+  width: 40%;
 }
 .user-activity h4 {
   font-size: 12px;
@@ -377,10 +378,25 @@ hr {
 .user-amount {
   flex: 1;
   display: flex;
-  overflow: hidden;
 }
 .user-amount p {
   font-size: 14px;
   font-weight: 500;
   margin-left: auto;
+}
+.user-quantity {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.user-quantity h5 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+}
+.user-quantity p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+  color: #4c4c4c;
 }
