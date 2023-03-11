@@ -49,6 +49,7 @@
 
   padding: 0 10px;
   margin: 5px 0;
+  font-size: 15px;
 
   cursor: pointer;
 }
@@ -135,7 +136,7 @@
   border: #7e7e7e 1px solid;
   border-radius: 8px;
 }
-.profile-picture img {
+.profile-pic img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
