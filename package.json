@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Kaushallrai/Inventory_Management_System/issues"
   },
-  "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme"
+  "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme",
+  "dependencies": {
+    "chart.js": "^4.2.1"
+  }
 }

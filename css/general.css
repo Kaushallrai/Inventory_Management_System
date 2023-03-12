@@ -282,6 +282,11 @@ hr {
   font-size: 40px;
   color: #000000;
 }
+
+#myChart {
+  border: #000000 solid 1px;
+}
+
 .section-two {
   position: absolute;
   top: -2px;
