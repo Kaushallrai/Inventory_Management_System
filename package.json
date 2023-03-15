@@ -1,10 +1,15 @@
 {
   "name": "inventory_management_system",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.1.0"
   },
   "repository": {
     "type": "git",
@@ -15,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/Kaushallrai/Inventory_Management_System/issues"
   },
-  "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme",
-  "dependencies": {
-    "chart.js": "^4.2.1"
-  }
+  "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme"
 }
