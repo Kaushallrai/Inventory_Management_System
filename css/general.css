@@ -8,6 +8,7 @@
 body {
   margin-top: 140px;
   margin-left: 245px;
+  margin-right: 10px;
   background-color: #f7f7f7;
   height: 150vh;
 }
@@ -66,7 +67,9 @@ body {
 }
 .main-content {
   /* position: relative; */
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 .section-one {
   margin: -5px 10px 10px 20px;
