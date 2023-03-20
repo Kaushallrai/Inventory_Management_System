@@ -1,5 +1,9 @@
-:root{
- --clr-primary-400:
+:root {
+  --clr-primary-400: ;
+  --clr-primary-100: ;
+
+  --clr-accent-400: ;
+  --clr-accent-100: ;
 }
 *,
 *::before,
