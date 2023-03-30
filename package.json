@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Kaushallrai/Inventory_Management_System/issues"
   },
-  "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme"
+  "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme",
+  "dependencies": {
+    "@cubejs-client/core": "^0.31.0",
+    "chart.js": "^4.2.1"
+  }
 }

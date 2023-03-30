@@ -6,16 +6,14 @@
 }
 
 body {
-  margin-top: 140px;
-  margin-left: 245px;
-  margin-right: 10px;
+  position: absolute;
   background-color: #f7f7f7;
   height: 150vh;
 }
 
 .page-info-stat {
   background-color: #ffffff;
-  height: 55px;
+  height: 56px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -23,10 +21,10 @@ body {
   justify-content: space-between;
 
   position: fixed;
-  top: 61px;
-  left: 240px;
+  top: 60px;
+  left: 210px;
   right: 0;
-  z-index: 1;
+  z-index: 100;
 }
 .left-info {
   width: fit-content;
@@ -66,11 +64,14 @@ body {
   margin-left: 5px;
 }
 .main-content {
-  /* position: relative; */
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  
-  gap: 20px;
+  margin-top: 140px;
+  margin-left: 210px;
+  margin-right: 10px;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
 }
 .section-one {
   margin: -5px 10px 10px 20px;
@@ -119,12 +120,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
 
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px 15px 25px 15px;
   width: 283px;
+  height: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .total-sales-container {
@@ -300,32 +301,20 @@ hr {
   color: #000000;
 }
 
-#myChart {
-  border: #000000 solid 1px;
-}
-
 .section-two {
-  /* position: absolute;
-  top: -2px;
-  right: 20px; */
-
-  width: 320px;
-  height: 700px;
+  width: 350px;
+  height: 740px;
   margin-top: -5px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 10px 10px 10px;
+  padding: 15px 10px 10px 12px;
 
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
-/* @media screen and (max-width: 1500px) {
-  .section-two {
-    display: none;
-  }
-} */
+
 .recent-sales,
 .latest-orders {
   display: flex;
@@ -422,4 +411,28 @@ hr {
   font-weight: 600;
   margin-left: auto;
   color: #4c4c4c;
+}
+.chart-container {
+  width: 900px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 10px 10px 10px;
+  border-radius: 10px;
+}
+.chart-container button {
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4c4c4c;
+  margin-right: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+}
+.chart-container button:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.0005);
 }
