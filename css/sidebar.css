@@ -26,11 +26,11 @@
 .top-header {
   font-size: 15px;
   color: #808080;
-  margin: 10px 0 5px 0px;
+  margin: 10px 0 5px 5px;
   padding: 0 35px;
 }
 .sidebar-section-container {
-  padding: 0 22px;
+  padding: 0 10px 0 25px;
 }
 .dashboard-container,
 .users-container,
@@ -47,8 +47,8 @@
   height: 40px;
   border-radius: 6px;
 
-  padding: 0 10px;
-  margin: 5px 0;
+  padding: 0 10px 0 0;
+  margin: 5px 15px 5px 0;
   font-size: 15px;
 
   cursor: pointer;
@@ -60,15 +60,11 @@
 .sales-container:hover,
 .invoice-container:hover,
 .bill-container:hover,
-.stakeholders-container:hover,
-.dashboard-container:active,
-.users-container:active,
-.inventory-container:active,
-.purchase-container:active,
-.sales-container:active,
-.invoice-container:active,
-.bill-container:active,
-.stakeholders-container:active,
+.stakeholders-container:hover {
+  margin-left: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
 .dashboard-container:focus,
 .users-container:focus,
 .inventory-container:focus,
@@ -76,8 +72,30 @@
 .sales-container:focus,
 .invoice-container:focus,
 .bill-container:focus,
-.stakeholders-container:focus {
+.stakeholders-container:focus,
+.dashboard-container:active,
+.users-container:active,
+.inventory-container:active,
+.purchase-container:active,
+.sales-container:active,
+.invoice-container:active,
+.bill-container:active,
+.stakeholders-container:active {
   background-color: #ececec;
+  margin-left: -15px;
+}
+.dashboard-container:focus:before,
+.users-container:focus:before,
+.inventory-container:focus:before,
+.purchase-container:focus:before,
+.sales-container:focus:before,
+.invoice-container:focus:before,
+.bill-container:focus:before,
+.stakeholders-container:focus:before {
+  content: " ";
+  width: 6px;
+  height: 100%;
+  background-color: #7e7e7e;
 }
 
 .dashboard-container span {
@@ -99,7 +117,7 @@
 .mid-header {
   font-size: 15px;
   color: #808080;
-  margin: 0 0 10px -22px;
+  margin: 0 0 10px -20px;
   padding: 0 35px;
 }
 .inventory-container span,
@@ -129,6 +147,8 @@
 .lower-section {
   background-color: #eaeaea;
   margin-top: 140px;
+  margin-left: -5px;
+  margin-right: 7px;
 
   display: flex;
   align-items: center;
