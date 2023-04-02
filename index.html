@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventario_</title>
-    <script
-      type="module"
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"
-    ></script>
+    <title>Inventario</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -100,7 +97,7 @@
             <div class="total-sales-container">
               <div class="total-sales-stats-container">
                 <div class="stats-one">
-                  <i class="fa-solid fa-boxes-packing"></i>
+                  <img src="./icons/sales.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Total Sales</p>
@@ -110,7 +107,7 @@
 
               <div class="total-sales-stats-container">
                 <div class="stats-two">
-                  <i class="fa-solid fa-chart-line"></i>
+                  <img src="./icons/revenue.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Revenue</p>
@@ -120,7 +117,7 @@
 
               <div class="total-sales-stats-container">
                 <div class="stats-three">
-                  <i class="fa-solid fa-boxes-packing"></i>
+                  <img src="./icons/cost.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Cost</p>
@@ -130,7 +127,7 @@
 
               <div class="total-sales-stats-container">
                 <div class="stats-four">
-                  <i class="fa-solid fa-boxes-packing"></i>
+                  <img src="./icons/sales-return.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Returns</p>
@@ -151,7 +148,7 @@
             <div class="total-sales-container">
               <div class="total-sales-stats-container">
                 <div class="stats-five">
-                  <i class="fa-solid fa-boxes-packing"></i>
+                  <img src="./icons/purchase.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>No of Purchase</p>
@@ -161,7 +158,7 @@
 
               <div class="total-sales-stats-container">
                 <div class="stats-six">
-                  <i class="fa-solid fa-chart-line"></i>
+                  <img src="./icons/order-cancel.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Cancel Order</p>
@@ -171,7 +168,7 @@
 
               <div class="total-sales-stats-container">
                 <div class="stats-seven">
-                  <i class="fa-solid fa-boxes-packing"></i>
+                  <img src="./icons/cost.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Cost</p>
@@ -181,7 +178,7 @@
 
               <div class="total-sales-stats-container">
                 <div class="stats-eight">
-                  <i class="fa-solid fa-boxes-packing"></i>
+                  <img src="./icons/sales-return.png" alt="" />
                 </div>
                 <div class="stats">
                   <p>Returns</p>
@@ -247,9 +244,9 @@
             </div>
             <div class="inventory-stats">
               <div class="inv-stats-one">
-                <span class="material-symbols-outlined"> deployed_code </span>
+                <img src="./icons/stakeholders.png" alt="" />
                 <p>Customers</p>
-                <h3>2.5</h3>
+                <h3>2.5K</h3>
               </div>
               <div class="inv-stats-two">
                 <span class="material-symbols-outlined"> local_shipping </span>
@@ -259,7 +256,7 @@
             </div>
           </div>
           <div class="chart-container">
-            <canvas id="acquisitions"></canvas>
+            <canvas id="chart"></canvas>
             <button id="flip-chart">Bar Chart</button>
           </div>
         </div>
@@ -392,7 +389,7 @@
 
       <div class="sidebar">
         <div class="logo-container">
-          <h1>Inventario_</h1>
+          <h1><img src="./icons/inventory.png" />Inventario</h1>
         </div>
         <div class="top-header"><p>Menu</p></div>
 
@@ -465,6 +462,6 @@
       src="https://kit.fontawesome.com/5341c54a83.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="acquisitions.js"></script>
+    <script type="module" src="./chart.js"></script>
   </body>
 </html>

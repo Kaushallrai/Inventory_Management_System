@@ -18,10 +18,19 @@
   height: 70px;
   padding: 10px 0 10px 10px;
   background-color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.logo-container img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-bottom: -5px;
+  margin-left: 5px;
 }
 .logo-container h1 {
   font-family: "Varela Round", sans-serif;
+  font-size: 27px;
 }
 .top-header {
   font-size: 15px;

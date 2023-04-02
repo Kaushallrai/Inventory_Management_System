@@ -107,14 +107,6 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
-.inventory-overview {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-
-  font-size: 16px;
-  font-weight: 500;
-}
 
 .inventory-summary-container {
   display: flex;
@@ -128,6 +120,20 @@ body {
   height: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.inventory-overview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+.inventory-stats img {
+  height: 40px;
+  width: 40px;
+  color: #000000;
+}
+
 .total-sales-container {
   display: flex;
   align-items: center;
@@ -158,89 +164,94 @@ body {
   font-weight: 600;
 }
 .stats-one {
-  padding: 15px 10px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-one i {
-  font-size: 24px;
+.stats-one img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
 
 .stats-two {
-  padding: 15px 15px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-two i {
-  font-size: 26px;
+.stats-two img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
 .stats-three {
-  padding: 15px 10px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-three i {
-  font-size: 24px;
+.stats-three img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
 .stats-four {
-  padding: 15px 10px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-four i {
-  font-size: 24px;
+.stats-four img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
-
 .stats-five {
-  padding: 15px 10px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-five i {
-  font-size: 24px;
+.stats-five img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
-
 .stats-six {
-  padding: 15px 15px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-six i {
-  font-size: 26px;
+.stats-six img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
 .stats-seven {
-  padding: 15px 10px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-seven i {
-  font-size: 24px;
+.stats-seven img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
 .stats-eight {
-  padding: 15px 10px 10px 10px;
+  padding: 10px 10px 5px 10px;
   background-color: #eaeaea;
   margin-right: 8px;
   border-radius: 8px;
 }
-.stats-eight i {
-  font-size: 24px;
+.stats-eight img {
+  height: 30px;
+  width: 30px;
   color: #000000;
 }
-
 .inventory-stats {
   display: flex;
   align-items: center;

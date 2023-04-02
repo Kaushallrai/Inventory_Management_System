@@ -1,6 +1,6 @@
-import Chart from "chart.js/auto";
+// import Chart from "./node_modules/chart.js/auto";
 
-const ctx = document.getElementById("acquisitions").getContext("2d");
+const ctx = document.getElementById("chart").getContext("2d");
 
 let chartType = "line";
 
