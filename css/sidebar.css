@@ -74,33 +74,16 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* focused state */
 .dashboard-container:focus,
-.users-container:focus,
-.inventory-container:focus,
-.purchase-container:focus,
-.sales-container:focus,
-.invoice-container:focus,
-.bill-container:focus,
-.stakeholders-container:focus,
-.dashboard-container:active,
-.users-container:active,
-.inventory-container:active,
-.purchase-container:active,
-.sales-container:active,
-.invoice-container:active,
-.bill-container:active,
-.stakeholders-container:active {
+.dashboard-container:focus-within,
+.dashboard-container.is-focused {
   background-color: #ececec;
   margin-left: -15px;
 }
 .dashboard-container:focus:before,
-.users-container:focus:before,
-.inventory-container:focus:before,
-.purchase-container:focus:before,
-.sales-container:focus:before,
-.invoice-container:focus:before,
-.bill-container:focus:before,
-.stakeholders-container:focus:before {
+.dashboard-container:focus-within:before,
+.dashboard-container.is-focused:before {
   content: " ";
   width: 6px;
   height: 100%;
