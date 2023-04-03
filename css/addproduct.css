@@ -16,7 +16,21 @@
 .left-info {
   width: 650px;
   margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-info .main {
   font-size: 19px;
+  font-weight: 500;
+}
+.left-info .middle {
+  font-size: 12px;
+  color: #4c4c4c;
+  width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .right-info {
   display: flex;

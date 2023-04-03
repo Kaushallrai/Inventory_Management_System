@@ -17,6 +17,7 @@
   width: fit-content;
   margin: 0 30px;
   font-size: 19px;
+  font-weight: 500;
 }
 .right-info {
   display: flex;
