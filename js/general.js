@@ -31,7 +31,7 @@ class ISidebar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div class="sidebar">
         <div class="logo-container">
-          <h1><img src="./icons/inventory.png" />Inventario</h1>
+          <h1><img src="./inventory.png" />Inventario</h1>
         </div>
         <div class="top-header"><p>Menu</p></div>
 

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif, Arial;
+}
+
+body {
+  position: absolute;
+  background-color: #2d77d2;
+  height: 150vh;
+}
+.main-content {
+  position: relative;
+  display: grid;
+  margin-top: 137px;
+  margin-left: 231px;
+  margin-right: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background-color: #ffffff;
+  width: 1266px;
+  height: 856px;
+}

@@ -1,0 +1,53 @@
+.page-info-stat {
+  background-color: #ffffff;
+  height: 56px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 60px;
+  left: 210px;
+  right: 0;
+  z-index: 100;
+}
+.left-info {
+  width: 650px;
+  margin: 0 30px;
+  font-size: 19px;
+}
+.right-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 350px;
+  font-size: 12px;
+  margin-right: 22px;
+  font-weight: 500;
+}
+.delete {
+  height: 30px;
+  padding: 0 10px;
+  border: #4c4c4c 1px solid;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+.delete:hover {
+  background-color: #ebebeb;
+  transition: all 0.1s ease-in;
+}
+.delete p {
+  margin-bottom: 0px;
+}
+.delete i {
+  margin-left: 5px;
+  margin-bottom: 0px;
+  color: #4c4c4c;
+}
