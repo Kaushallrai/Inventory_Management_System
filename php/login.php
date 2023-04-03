@@ -12,14 +12,14 @@ if (isset($_POST['email']) && isset($_POST['password'])){
   $email = validate($_POST['email']);
   $password = validate($_POST['password']);
 if(empty($email) && empty($password)) {
-    header("Location: ../html/index.php?error=Email and Password is required");
+    header("Location: ../php/index.php?error=Email and Password is required");
     exit();}
   else if(empty($email)){
-    header("Location: ../html/index.php?error=Email is required");
+    header("Location: ../php/index.php?error=Email is required");
     exit();
   }
   else if(empty($password)) {
-    header("Location: ../html/index.php?error=Password is required");
+    header("Location: ../php/index.php?error=Password is required");
     exit();
   }
   else{
@@ -36,18 +36,18 @@ sleep(2);
         exit();
       }
       else{
-        header("Location: ../html/index.php?error=Incorrect Email or password");
+        header("Location: ../php/index.php?error=Incorrect Email or password");
         exit();
       }
     }
     else{
-      header("Location: ../html/index.php?error=Incorrect Email or password");
+      header("Location: ../php/index.php?error=Incorrect Email or password");
       exit();
     }
   }
 }
 else{
-  header("Location: ../html/index.php");
+  header("Location: ../php/index.php");
   exit();
 }
 ?>
