@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="../html/login.php" method="post">
+      <form action="../html/login.php" method="post" >
         <h1><img src="../icons/inventory.png" />inventario</h1>
 
         <h2>Login</h2>
@@ -56,8 +56,13 @@
           </div>
         </div>
         <div class="form-group">
-          <input type="submit" value="Login" />
+          <input type="submit" value="Login" onclick="showLoading()" />
         </div>
+
+          <div id="overlay">
+    <div id="loader"></div>
+  </div>
+
         <div class="or-divider">
           <hr class="or-divider-line" />
           <span class="or-divider-text">OR</span>
@@ -71,5 +76,6 @@
         </div>
       </form>
     </div>
+<script src="../js/splash.js"></script>
   </body>
 </html>

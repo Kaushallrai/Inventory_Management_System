@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "../php/connect.php";
+include "../db/connect.php";
 
 if (isset($_POST['email']) && isset($_POST['password'])){
   function validate($data){
@@ -11,8 +11,10 @@ if (isset($_POST['email']) && isset($_POST['password'])){
   }
   $email = validate($_POST['email']);
   $password = validate($_POST['password']);
-
-  if(empty($email)){
+if(empty($email) && empty($password)) {
+    header("Location: ../html/index.php?error=Email and Password is required");
+    exit();}
+  else if(empty($email)){
     header("Location: ../html/index.php?error=Email is required");
     exit();
   }
@@ -29,6 +31,7 @@ if (isset($_POST['email']) && isset($_POST['password'])){
         $_SESSION['email']=$row['Email'];
         $_SESSION['password']=$row['Password'];
         $_SESSION['id']=$row['UserID'];
+sleep(2);
         header("Location: ../index.html");
         exit();
       }
