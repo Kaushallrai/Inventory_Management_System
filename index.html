@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      window.onbeforeunload = function () {
+        return "Are you sure you want to leave this f page?";
+      };
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -259,6 +264,13 @@
             <canvas id="chart"></canvas>
             <button id="flip-chart">Bar Chart</button>
           </div>
+          <!-- <div id="overlay">
+            <div class="popup">
+              <p>Are you sure you want to log out?</p>
+              <button id="confirm">Yes</button>
+              <button id="cancel">No</button>
+            </div>
+          </div> -->
         </div>
 
         <div class="section-two">
@@ -462,6 +474,7 @@
       src="https://kit.fontawesome.com/5341c54a83.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./chart.js"></script>
+    <script type="module" src="./js/chart.js"></script>
+    <script src="./js/logout.js"></script>
   </body>
 </html>
