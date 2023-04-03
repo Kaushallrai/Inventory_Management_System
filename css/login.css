@@ -174,9 +174,8 @@ h1 img {
   height: 1.5rem;
   margin-left: -2px;
   margin-bottom: -4px;
-  margin-right: 8px; /* Optional, add some space between the image and the text */
+  margin-right: 8px;
 }
-
 h2 {
   font-size: 1.2rem;
   font-weight: 500;
@@ -184,19 +183,19 @@ h2 {
   margin-bottom: 0.6rem;
   align-self: self-start;
 }
-p {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #707070;
-  margin-bottom: 2rem;
-  align-self: self-start;
-}
-.invalid {
+.error {
   display: flex;
   align-items: flex-start;
   width: 100%;
   margin: -10px 0 -8px 8px;
   color: red !important;
   font-size: 0.7rem;
-  display: none;
+}
+
+.optimize {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #707070;
+  margin-bottom: 2rem;
+  align-self: self-start;
 }

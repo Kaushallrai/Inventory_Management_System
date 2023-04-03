@@ -23,7 +23,6 @@
   "homepage": "https://github.com/Kaushallrai/Inventory_Management_System#readme",
   "dependencies": {
     "@cubejs-client/core": "^0.31.0",
-    "chart": "^0.1.2",
     "js": "^0.1.0"
   }
 }
