@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventario | Product</title>
+    <title>Inventario | Inventory</title>
 
     <script type="module" src="../js/general.js"></script>
     <script>
@@ -32,6 +32,23 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/products.css" />
     <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/add_product.css" />
+    <style>
+      .inventory-container:focus,
+      .inventory-container:focus-within,
+      .inventory-container.is-focused {
+        background-color: #ececec;
+        margin-left: -15px;
+      }
+      .inventory-container:focus:before,
+      .inventory-container:focus-within:before,
+      .inventory-container.is-focused:before {
+        content: " ";
+        width: 6px;
+        height: 100%;
+        background-color: #7e7e7e;
+      }
+    </style>
 
     <link
       rel="stylesheet"
@@ -57,7 +74,44 @@
   </head>
 
   <body style="display: solid">
-    < class="container">
+    <div class="overlay">
+      <div class="popup">
+        <div class="header-2">
+          <h2>Add Product</h2>
+          <button class="popup-close-button">&times;</button>
+        </div>
+        <form>
+          <label for="product-id">Product ID:</label>
+          <input type="text" id="product-id" name="product-id" required />
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" name="product-name" required />
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" step="0.01" required />
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required />
+          <label for="photo">Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            required
+          />
+          <label for="supplier-name">Supplier Name:</label>
+          <input type="text" id="supplier-name" name="supplier-name" required />
+          <label for="inventory-name">Inventory Name:</label>
+          <input
+            type="text"
+            id="inventory-name"
+            name="inventory-name"
+            required
+          />
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+    </div>
     <i-header></i-header>
     <div class="page-info-stat-2">
       <div class="left-info-2">
@@ -87,7 +141,7 @@
     <div class="main-content">
       <table>
         <tr>
-          <th>Image</th>
+          <th>Product</th>
           <th>Product Name</th>
 
           <th>
@@ -98,7 +152,8 @@
             Quantity
             <div class="sorting2"></div>
           </th>
-          <th>Store</th>
+          <th>Supplier</th>
+          <th>Inventory</th>
           <th>Availability</th>
         </tr>
         <tr>
@@ -113,6 +168,7 @@
           <td>$400.00</td>
           <td>400 units</td>
           <td>Alfreds Futterkiste</td>
+          <td>Electrocity</td>
           <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
         </tr>
         <tr>
@@ -127,6 +183,7 @@
           <td>$400.00</td>
           <td>400 units</td>
           <td>Centro comercial Moctezuma</td>
+          <td>Electrocity</td>
           <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
         </tr>
         <tr>
@@ -141,6 +198,7 @@
           <td>$400.00</td>
           <td>400 units</td>
           <td>Ernst Handel</td>
+          <td>Electrocity</td>
           <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
         </tr>
         <tr>
@@ -155,6 +213,7 @@
           <td>$400.00</td>
           <td>400 units</td>
           <td>Island Trading</td>
+          <td>Electrocity</td>
           <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
         </tr>
         <tr>
@@ -169,6 +228,7 @@
           <td>$400.00</td>
           <td>400 units</td>
           <td>Laughing Bacchus Winecellars</td>
+          <td>Electrocity</td>
           <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
         </tr>
         <tr>
@@ -183,6 +243,7 @@
           <td>$400.00</td>
           <td>400 units</td>
           <td>Magazzini Alimentari Riuniti</td>
+          <td>Electrocity</td>
           <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
         </tr>
       </table>
@@ -194,5 +255,6 @@
         document.body.style.display = "block";
       };
     </script>
+    <script src="../js/add_product.js"></script>
   </body>
 </html>

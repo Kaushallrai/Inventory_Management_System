@@ -53,6 +53,10 @@ class ISidebar extends HTMLElement {
             <div class="inventory-container" tabindex="0">
               <span class="material-symbols-outlined"> deployed_code </span>
               <p>Inventory</p>
+              <ul class="inventory-sub-container">
+              <li><a href="../php/products.html">Products</a></li>
+              <li><a href="../php/inventories.html">Inventories</a></li>
+              
             </div>
 
             <div class="purchase-container" tabindex="0">

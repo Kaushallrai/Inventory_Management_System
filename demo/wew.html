@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./wew.css" />
+  </head>
+  <body>
+    <button id="add-products-button">Add Product</button>
+    <div class="overlay">
+      <div class="popup">
+        <div class="header">
+          <h2>Add Product</h2>
+          <button class="popup-close-button">&times;</button>
+        </div>
+        <form>
+          <label for="product-id">Product ID:</label>
+          <input type="text" id="product-id" name="product-id" required />
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" name="product-name" required />
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" step="0.01" required />
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required />
+          <label for="photo">Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            required
+          />
+          <label for="supplier-name">Supplier Name:</label>
+          <input type="text" id="supplier-name" name="supplier-name" required />
+          <label for="inventory-name">Inventory Name:</label>
+          <input
+            type="text"
+            id="inventory-name"
+            name="inventory-name"
+            required
+          />
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./wew.js"></script>
+  </body>
+</html>
