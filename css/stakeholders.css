@@ -1,4 +1,4 @@
-.page-info-stat-2 {
+.page-info-stat-3 {
   background-color: #ffffff;
   height: 56px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -13,35 +13,38 @@
   right: 0;
   z-index: 100;
 }
-.left-info-2 {
+.left-info-3 {
   width: 600px;
   margin: 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.left-info-2 .main {
+.left-info-3 .main {
   font-size: 19px;
   font-weight: 500;
 }
-.left-info-2 .middle {
+.left-info-3 .middle {
   font-size: 12px;
   color: #4c4c4c;
-  width: 120px;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.right-info-2 {
+.middle {
+  width: 200px !important;
+}
+.right-info-3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 270px;
+  min-width: 300px;
   font-size: 12px;
   margin-right: 22px;
   font-weight: 500;
 }
-.right-info-2 .delete {
+.right-info-3 .delete {
   height: 30px;
   padding: 0 10px;
   border: #4c4c4c 1px solid;
@@ -53,20 +56,20 @@
 
   cursor: pointer;
 }
-.right-info-2 .delete:hover {
+.right-info-3 .delete:hover {
   background-color: #ebebeb;
   transition: all 0.1s ease-in;
   color: red;
 }
-.right-info-2 .delete p {
+.right-info-3 .delete p {
   margin-bottom: 0px;
 }
-.right-info-2 .delete i {
+.right-info-3 .delete i {
   margin-left: 5px;
   margin-bottom: 0px;
   color: #4c4c4c;
 }
-.right-info-2 .edit {
+.right-info-3 .edit {
   height: 30px;
   padding: 0 10px;
   border: #4c4c4c 1px solid;
@@ -78,20 +81,20 @@
 
   cursor: pointer;
 }
-.right-info-2 .edit:hover {
+.right-info-3 .edit:hover {
   background-color: #ebebeb;
   transition: all 0.1s ease-in;
   color: rgb(52, 202, 52);
 }
-.right-info-2 .edit p {
+.right-info-3 .edit p {
   margin-bottom: 0px;
 }
-.right-info-2 .edit i {
+.right-info-3 .edit i {
   margin-left: 5px;
   margin-bottom: 0px;
   color: #4c4c4c;
 }
-.right-info-2 .add {
+.right-info-3 .add {
   height: 30px;
   padding: 0 10px;
   border: #4c4c4c 1px solid;
@@ -103,15 +106,15 @@
 
   cursor: pointer;
 }
-.right-info-2 .add:hover {
+.right-info-3 .add:hover {
   background-color: #ebebeb;
   transition: all 0.1s ease-in;
   color: rgb(25, 81, 185);
 }
-.right-info-2 .add p {
+.right-info-3 .add p {
   margin-bottom: 0px;
 }
-.right-info-2 .add i {
+.right-info-3 .add i {
   margin-left: 5px;
   margin-bottom: 0px;
   color: #4c4c4c;
@@ -135,22 +138,32 @@ td {
 }
 
 th {
-  background-color: #28a745;
+  background-color: #6c757d;
   font-weight: bold;
   text-transform: uppercase;
-  height: 56px;
+}
+
+td img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-.sales-container {
-  background-color: #ececec !important;
-  margin-left: -15px !important;
+.stakeholders-container {
+  background-color: #ececec;
+  margin-left: -15px;
 }
-.sales-container:before {
+.stakeholders-container:before {
   content: " ";
   width: 6px;
   height: 100%;
   background-color: #7e7e7e;
+}
+.main-content {
+  margin-top: 140px;
 }

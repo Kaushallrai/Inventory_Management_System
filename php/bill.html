@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventario | Sales</title>
+    <title>Inventario | Bill</title>
 
     <script type="module" src="../js/general.js"></script>
     <script>
@@ -30,15 +30,15 @@
     />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/sales.css" />
+    <link rel="stylesheet" href="../css/bill.css" />
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="../css/add_product.css" />
     <style>
-      .sales-container {
+      .bill-container {
         background-color: #ececec;
         margin-left: -15px;
       }
-      .sales-container:before {
+      .bill-container:before {
         content: " ";
         width: 6px;
         height: 100%;
@@ -73,16 +73,12 @@
     <div class="overlay">
       <div class="popup">
         <div class="header-2">
-          <h2>Add Order</h2>
+          <h2>Add Bill</h2>
           <button class="popup-close-button">&times;</button>
         </div>
-        <form
-          method="POST"
-          action="add_order.php"
-          enctype="multipart/form-data"
-        >
-          <label for="order-id">Order ID:</label>
-          <input type="text" id="order-id" name="order_id" required />
+        <form method="POST" action="add_bill.php" enctype="multipart/form-data">
+          <label for="bill-id">Bill ID:</label>
+          <input type="text" id="bill-id" name="bill_id" required />
           <label for="product-id">Product ID:</label>
           <input type="text" id="product-id" name="product_id" required />
           <label for="product-name">Product Name:</label>
@@ -103,7 +99,7 @@
             <option value="Shipped">Shipped</option>
             <option value="Delivered">Delivered</option>
           </select>
-          <button type="submit">Add Order</button>
+          <button type="submit">Add Bill</button>
         </form>
       </div>
     </div>
@@ -119,7 +115,7 @@
       </div>
       <div class="right-info-2">
         <div class="add">
-          <p>Add Order</p>
+          <p>Add Bill</p>
           <i class="fa-solid fa-plus fa-lg"></i>
         </div>
         <div class="edit">
@@ -134,68 +130,42 @@
     </div>
     <i-sidebar></i-sidebar>
     <div class="main-content">
-      <table>
-        <tr>
-          <th>Order ID</th>
-          <th>Product</th>
-          <th>Date</th>
-          <th>Customer</th>
-          <th>Destination</th>
-          <th>Quantity</th>
-          <th>Total Price</th>
-          <th>Status</th>
-        </tr>
-        <tr>
-          <td>12345</td>
-          <td>Smartphone</td>
-          <td>2023-05-09</td>
-          <td>John Doe</td>
-          <td>123 Main St, Anytown USA</td>
-          <td>2</td>
-          <td>$800.00</td>
-          <td>Shipped</td>
-        </tr>
-        <tr>
-          <td>67890</td>
-          <td>Laptop</td>
-          <td>2023-05-08</td>
-          <td>Jane Smith</td>
-          <td>456 Oak St, Anytown USA</td>
-          <td>1</td>
-          <td>$1200.00</td>
-          <td>Delivered</td>
-        </tr>
-        <tr>
-          <td>24680</td>
-          <td>Tablet</td>
-          <td>2023-05-07</td>
-          <td>Bob Johnson</td>
-          <td>789 Elm St, Anytown USA</td>
-          <td>3</td>
-          <td>$1200.00</td>
-          <td>In Transit</td>
-        </tr>
-        <tr>
-          <td>13579</td>
-          <td>Headphones</td>
-          <td>2023-05-06</td>
-          <td>Sara Lee</td>
-          <td>321 Pine St, Anytown USA</td>
-          <td>1</td>
-          <td>$200.00</td>
-          <td>Out of Stock</td>
-        </tr>
-        <tr>
-          <td>11223</td>
-          <td>Monitor</td>
-          <td>2023-05-05</td>
-          <td>Tom Brown</td>
-          <td>555 Maple St, Anytown USA</td>
-          <td>2</td>
-          <td>$800.00</td>
-          <td>Processing</td>
-        </tr>
-      </table>
+      <div class="bill-list">
+        <div class="bill-item" onclick="showBill()">
+          <span>1.</span><span>Bill No:</span> 12345 <span>Date:</span> May 10,
+          2023 <span>Customer:</span> John Smith <span>Total:</span> $45.00
+        </div>
+
+        <div class="bill-item" onclick="showBill()">
+          <span>2.</span><span>Bill No:</span> 54321 <span>Date:</span> May 9,
+          2023 <span>Customer:</span> Jane Doe <span>Total:</span> $75.00
+        </div>
+
+        <div class="bill-item" onclick="showBill()">
+          <span>3.</span><span>Bill No:</span> 98765 <span>Date:</span> May 8,
+          2023 <span>Customer:</span> Bob Johnson <span>Total:</span> $20.00
+        </div>
+      </div>
+      <div class="bill-contain">
+        <div class="bill-header">
+          <h1>Bill</h1>
+          <p>Date: May 10, 2023</p>
+        </div>
+        <div class="bill-info">
+          <div><span>Bill No:</span> 12345</div>
+          <div><span>Customer:</span> John Smith</div>
+          <div><span>Address:</span> 123 Main St, Anytown USA</div>
+          <div><span>Email:</span> johnsmith@example.com</div>
+        </div>
+        <div class="bill-items">
+          <div><span>Item 1</span> $10.00</div>
+          <div><span>Item 2</span> $15.00</div>
+          <div><span>Item 3</span> $20.00</div>
+        </div>
+        <div class="bill-total">
+          <span>Total: $45.00</span>
+        </div>
+      </div>
     </div>
 
     <script>

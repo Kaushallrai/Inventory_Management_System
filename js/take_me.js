@@ -22,16 +22,12 @@ function addSidebarClickListeners() {
       window.location.href = "../php/sales.html";
     });
 
-    invoiceLink.addEventListener("click", () => {
-      window.location.href = "invoice.html";
-    });
-
     billLink.addEventListener("click", () => {
-      window.location.href = "bill.html";
+      window.location.href = "../php/bill.html";
     });
 
     stakeholdersLink.addEventListener("click", () => {
-      window.location.href = "stakeholders.html";
+      window.location.href = "../php/stakeholders.html";
     });
   });
 }
