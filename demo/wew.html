@@ -8,24 +8,29 @@
     <link rel="stylesheet" href="./wew.css" />
   </head>
   <body>
-    <button id="add-products-button">Add Product</button>
+    <button id="add-products-button">Add Users</button>
     <div class="overlay">
       <div class="popup">
         <div class="header">
-          <h2>Add Product</h2>
+          <h2>Add User</h2>
           <button class="popup-close-button">&times;</button>
         </div>
         <form>
-          <label for="product-id">Product ID:</label>
-          <input type="text" id="product-id" name="product-id" required />
-          <label for="product-name">Product Name:</label>
-          <input type="text" id="product-name" name="product-name" required />
-          <label for="description">Description:</label>
-          <textarea id="description" name="description" required></textarea>
-          <label for="price">Price:</label>
-          <input type="number" id="price" name="price" step="0.01" required />
-          <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" required />
+          <label for="user-id">User ID:</label>
+          <input type="text" id="user-id" name="user-id" required />
+          <label for="user-name">User Name:</label>
+          <input type="text" id="user-name" name="user-name" required />
+          <label for="email-address">Email Address:</label>
+          <input
+            type="email"
+            id="email-address"
+            name="email-address"
+            required
+          />
+          <label for="phone-number">Phone Number:</label>
+          <input type="tel" id="phone-number" name="phone-number" required />
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
           <label for="photo">Photo:</label>
           <input
             type="file"
@@ -34,16 +39,14 @@
             accept="image/*"
             required
           />
-          <label for="supplier-name">Supplier Name:</label>
-          <input type="text" id="supplier-name" name="supplier-name" required />
-          <label for="inventory-name">Inventory Name:</label>
-          <input
-            type="text"
-            id="inventory-name"
-            name="inventory-name"
-            required
-          />
-          <button type="submit">Add Product</button>
+          <label for="user-role">User Role:</label>
+          <select id="user-role" name="user-role" required>
+            <option value="">-- Select Role --</option>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+            <option value="employee">Employee</option>
+          </select>
+          <button type="submit">Add User</button>
         </form>
       </div>
     </div>

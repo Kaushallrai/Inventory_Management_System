@@ -151,3 +151,13 @@ td img {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+.inventory-container {
+  background-color: #ececec;
+  margin-left: -15px;
+}
+.inventory-container:before {
+  content: " ";
+  width: 6px;
+  height: 100%;
+  background-color: #7e7e7e;
+}

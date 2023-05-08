@@ -1,4 +1,4 @@
-const addUserButton = document.querySelector("add-users-button");
+const addUserButton = document.querySelector(".add");
 const popup = document.querySelector(".popup");
 const closeButton = document.querySelector(".popup-close-button");
 const overlay = document.querySelector(".overlay");

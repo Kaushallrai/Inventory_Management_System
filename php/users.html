@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventario | Dashboard</title>
-  
+    <title>Inventario | Users</title>
 
     <script type="module" src="../js/general.js"></script>
     <script>
@@ -18,20 +17,38 @@
         document.head.appendChild(script);
       })();
     </script>
-    <script type="module" defer src="./js/chart.js"></script>
-    <script defer src="./js/logout.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/users.css" />
+    <link rel="stylesheet" href="../css/add_users.css" />
+    <style>
+      .users-container {
+        background-color: #ececec;
+        margin-left: -15px;
+      }
+      .users-container:before {
+        content: " ";
+        width: 6px;
+        height: 100%;
+        background-color: #7e7e7e;
+      }
+      .main-content {
+        margin-top: 140px;
+      }
+    </style>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -53,98 +70,159 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/sidebar.css" />
-    <link rel="stylesheet" href="../css/users.css" />
   </head>
 
-  <body style="display: none">
-    <div class="container">
-      <i-header></i-header>
-
-      <div class="page-info-stat">
-        <div class="left-info">
-          <p>Dashboard</p>
+  <body style="display: solid">
+    <div class="overlay">
+      <div class="popup">
+        <div class="header-3">
+          <h2>Add User</h2>
+          <button class="popup-close-button">&times;</button>
         </div>
-        <div class="right-info">
-          <div class="month">
-            <p>Month to date</p>
-          </div>
-          <div class="year">
-            <p>Year to date</p>
-          </div>
-          <div class="recent-activities">
-            <p>Recent Activities</p>
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
+        <form>
+          <label for="user-id">User ID:</label>
+          <input type="text" id="user-id" name="user-id" required />
+          <label for="user-name">User Name:</label>
+          <input type="text" id="user-name" name="user-name" required />
+          <label for="email-address">Email Address:</label>
+          <input
+            type="email"
+            id="email-address"
+            name="email-address"
+            required
+          />
+          <label for="phone-number">Phone Number:</label>
+          <input type="tel" id="phone-number" name="phone-number" required />
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+          <label for="photo">Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            required
+          />
+          <label for="user-role">User Role:</label>
+          <select id="user-role" name="user-role" required>
+            <option value="">-- Select Role --</option>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+            <option value="employee">Employee</option>
+          </select>
+          <button type="submit">Add User</button>
+        </form>
+      </div>
+    </div>
+
+    <i-header></i-header>
+    <div class="page-info-stat-3">
+      <div class="left-info-3">
+        <p class="main">Users</p>
+        <div class="middle">
+          <p class="mid" id="zero">Users</p>
+          <p class="mid" id="one ">/</p>
+          <p class="mid" id="two">Manage Users</p>
         </div>
       </div>
+      <div class="right-info-3">
+        <div class="add">
+          <p>Add Users</p>
+          <i class="fa-solid fa-plus fa-lg"></i>
+        </div>
+        <div class="edit">
+          <p>Edit</p>
+          <i class="fa-solid fa-edit fa-lg"></i>
+        </div>
+        <div class="delete">
+          <p>Delete</p>
+          <i class="fa-solid fa-trash fa-lg"></i>
+        </div>
+      </div>
+    </div>
+    <i-sidebar></i-sidebar>
+    <div class="main-content">
+      <table>
+        <tr>
+          <th>User</th>
+          <th>User Name</th>
 
-      <div class="main-content">
-        <div class="section-one">
-          <div class="userscontainer">
-            <div class="users">
-              <br>
-              <h2>Manage Users</h2>
-              <br>
-              <table>
-                <tr>
-                  <th>Image</th>
-                  <th>User Name</th> <div class=sort><i class="fa-solid fa-sort"></i></div>
-                  <th>Email<div class="sorting1"></div></th>
-                  <th>Role<div class="sorting2"></div></th>
-                </tr>
-                <tr>
-                  <td><img src="https://i0.wp.com/bhtherapygroup.com/wp-content/uploads/2019/07/pleaser.jpeg?fit=8495%2C5663&ssl=1" height="40px" width="40px"></td>
-                  <td>Sagar Adhikari</td>
-                  <td>Dinesh.Rai85@outlook.com.np</td>
-                  <td>Admin</td> 
-                  <div class="edit-container">
-                    <div class="edit">Edit</div><i class="fa-regular fa-pen-to-square"></i>
-                    </div>
-                    <div class="delete-container">
-                      <div class="delete">Delete</div><i class="fa-sharp fa-solid fa-trash"></i>
-                      </div>
-                    </div>
-                  </div>
-                </tr>
-                <tr>
-                  <td><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg" height="40px" width="40px"></td>
-                  <td>Sunita Tamang
-                  </td>
-                  <td>Sunita.Tamang92@mail.com.np</td>
-                  <td>Admin</td>
-                </tr>
-                <tr>
-                  <td><img src="https://hips.hearstapps.com/hmg-prod/images/articles/2016/02/need-to-be-right-1487213312.jpg?crop=0.848xw:1xh;center,top&resize=1200:*" height="40px" width="40px"></td>
-                  <td>Dinesh Rai</td>
-                  <td>Dinesh.Rai85@outlook.com.np</td>
-                  <td>Admin</td>
-                </tr>
-                <tr>
-                  <td><img src="https://media.npr.org/assets/img/2022/11/08/ap22312071681283-0d9c328f69a7c7f15320e8750d6ea447532dff66.jpg" height="40px" width="40px"></td>
-                  <td>Roshan Thapa</td>
-                  <td>Dinesh.Rai85@outlook.com.np</td>
-                  <td>Admin</td>
-                </tr>
-                <tr>
-                  <td><img src="" height="40px" width="40px"></td>
-                  <td>Sweta Sharma</td>
-                  <td>Dinesh.Rai85@outlook.com.np</td>
-                  <td>Admin</td>
-                </tr>
-                <tr>
-                  <td><img src="" height="40px" width="40px"></td>
-                  <td>Amrit Rai</td>
-                  <td>Dinesh.Rai85@outlook.com.np</td>
-                  <td>Admin</td>
-                </tr>
-              </table>
-              
-
-      <i-sidebar></i-sidebar>
+          <th>Email Address</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Role</th>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://randomuser.me/api/portraits/men/1.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>John Smith</td>
+          <td>john.smith@example.com</td>
+          <td>+1-234-567-8901</td>
+          <td>123 Main St, Anytown, USA</td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://randomuser.me/api/portraits/women/2.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Jane Doe</td>
+          <td>jane.doe@example.com</td>
+          <td>+44-123-456-7890</td>
+          <td>456 High St, London, UK</td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://randomuser.me/api/portraits/men/3.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Mike Johnson</td>
+          <td>mike.johnson@example.com</td>
+          <td>+61-987-654-321</td>
+          <td>789 King St, Sydney, Australia</td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://randomuser.me/api/portraits/women/4.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Emily Wilson</td>
+          <td>emily.wilson@example.com</td>
+          <td>+33-6-12-34-56-78</td>
+          <td>101 Rue de Rivoli, Paris, France</td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://randomuser.me/api/portraits/men/5.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>David Lee</td>
+          <td>david.lee@example.com</td>
+          <td>+82-2-123-4567</td>
+          <td>1234 Gangnam-gu, Seoul, South Korea</td>
+          <td>Admin</td>
+        </tr>
+      </table>
     </div>
 
     <script>
@@ -153,5 +231,7 @@
         document.body.style.display = "block";
       };
     </script>
+    <script src="../js/add_product.js"></script>
+    <script src="../js/take_me.js"></script>
   </body>
 </html>
