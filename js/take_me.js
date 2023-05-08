@@ -13,16 +13,13 @@ function addSidebarClickListeners() {
     usersLink.addEventListener("click", () => {
       window.location.href = "../php/users.html";
     });
-    inventoryLink.addEventListener("click", () => {
-      window.location.href = "../php/inventories.html";
-    });
 
     purchaseLink.addEventListener("click", () => {
-      window.location.href = "purchase.html";
+      window.location.href = "../php/purchase.html";
     });
 
     salesLink.addEventListener("click", () => {
-      window.location.href = "sales.html";
+      window.location.href = "../php/sales.html";
     });
 
     invoiceLink.addEventListener("click", () => {

@@ -74,22 +74,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* focused state */
-/* .dashboard-container:focus,
-.dashboard-container:focus-within,
-.dashboard-container.is-focused {
-  background-color: #ececec;
-  margin-left: -15px;
-}
-.dashboard-container:focus:before,
-.dashboard-container:focus-within:before,
-.dashboard-container.is-focused:before {
-  content: " ";
-  width: 6px;
-  height: 100%;
-  background-color: #7e7e7e;
-} */
-
 .dashboard-container span {
   font-size: 23px;
   font-weight: 500;
