@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario | Sales</title>
+
+    <script type="module" src="../js/general.js"></script>
+    <script>
+      // Load Font Awesome asynchronously
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://kit.fontawesome.com/5341c54a83.js";
+        script.crossOrigin = "anonymous";
+        script.async = true;
+        document.head.appendChild(script);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sales.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/add_product.css" />
+    <style>
+      .sales-container {
+        background-color: #ececec;
+        margin-left: -15px;
+      }
+      .sales-container:before {
+        content: " ";
+        width: 6px;
+        height: 100%;
+        background-color: #7e7e7e;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..100,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body style="display: solid">
+    <div class="overlay">
+      <div class="popup">
+        <div class="header-2">
+          <h2>Add Order</h2>
+          <button class="popup-close-button">&times;</button>
+        </div>
+        <form
+          method="POST"
+          action="add_order.php"
+          enctype="multipart/form-data"
+        >
+          <label for="order-id">Order ID:</label>
+          <input type="text" id="order-id" name="order_id" required />
+          <label for="product-id">Product ID:</label>
+          <input type="text" id="product-id" name="product_id" required />
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" name="product_name" required />
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+          <label for="customer">Customer:</label>
+          <input type="text" id="customer" name="customer" required />
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" name="destination" required />
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required />
+          <label for="total-price">Total Price:</label>
+          <input type="text" id="total-price" name="total_price" required />
+          <label for="status">Status:</label>
+          <select id="status" name="status">
+            <option value="Processing">Processing</option>
+            <option value="Shipped">Shipped</option>
+            <option value="Delivered">Delivered</option>
+          </select>
+          <button type="submit">Add Order</button>
+        </form>
+      </div>
+    </div>
+    <i-header></i-header>
+    <div class="page-info-stat-2">
+      <div class="left-info-2">
+        <p class="main">Sales</p>
+        <div class="middle">
+          <p class="mid" id="zero">Sales</p>
+          <p class="mid" id="one">/</p>
+          <p class="mid" id="two">Recent Sales</p>
+        </div>
+      </div>
+      <div class="right-info-2">
+        <div class="add">
+          <p>Add Order</p>
+          <i class="fa-solid fa-plus fa-lg"></i>
+        </div>
+        <div class="edit">
+          <p>Edit</p>
+          <i class="fa-solid fa-edit fa-lg"></i>
+        </div>
+        <div class="delete">
+          <p>Delete</p>
+          <i class="fa-solid fa-trash fa-lg"></i>
+        </div>
+      </div>
+    </div>
+    <i-sidebar></i-sidebar>
+    <div class="main-content">
+      <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Product</th>
+          <th>Date</th>
+          <th>Customer</th>
+          <th>Destination</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>12345</td>
+          <td>Smartphone</td>
+          <td>2023-05-09</td>
+          <td>John Doe</td>
+          <td>123 Main St, Anytown USA</td>
+          <td>2</td>
+          <td>$800.00</td>
+          <td>Shipped</td>
+        </tr>
+        <tr>
+          <td>67890</td>
+          <td>Laptop</td>
+          <td>2023-05-08</td>
+          <td>Jane Smith</td>
+          <td>456 Oak St, Anytown USA</td>
+          <td>1</td>
+          <td>$1200.00</td>
+          <td>Delivered</td>
+        </tr>
+        <tr>
+          <td>24680</td>
+          <td>Tablet</td>
+          <td>2023-05-07</td>
+          <td>Bob Johnson</td>
+          <td>789 Elm St, Anytown USA</td>
+          <td>3</td>
+          <td>$1200.00</td>
+          <td>In Transit</td>
+        </tr>
+        <tr>
+          <td>13579</td>
+          <td>Headphones</td>
+          <td>2023-05-06</td>
+          <td>Sara Lee</td>
+          <td>321 Pine St, Anytown USA</td>
+          <td>1</td>
+          <td>$200.00</td>
+          <td>Out of Stock</td>
+        </tr>
+        <tr>
+          <td>11223</td>
+          <td>Monitor</td>
+          <td>2023-05-05</td>
+          <td>Tom Brown</td>
+          <td>555 Maple St, Anytown USA</td>
+          <td>2</td>
+          <td>$800.00</td>
+          <td>Processing</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // Display body after all resources have loaded
+      window.onload = function () {
+        document.body.style.display = "block";
+      };
+    </script>
+    <script src="../js/add_product.js"></script>
+    <script src="../js/take_me.js"></script>
+  </body>
+</html>
