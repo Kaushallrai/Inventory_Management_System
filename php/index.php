@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <form action="../php/login.php" method="post" >
-        <h1><img src="../icons/inventory.png" />inventario</h1>
+        <h1><img src="./icons/inventory.png" />inventario</h1>
 
         <h2>Login</h2>
         <p class="optimize"> Optimize inventory, achieve growth</p>

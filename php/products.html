@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario | Product</title>
+
+    <script type="module" src="../js/general.js"></script>
+    <script>
+      // Load Font Awesome asynchronously
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://kit.fontawesome.com/5341c54a83.js";
+        script.crossOrigin = "anonymous";
+        script.async = true;
+        document.head.appendChild(script);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..100,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body style="display: solid">
+    < class="container">
+    <i-header></i-header>
+    <div class="page-info-stat-2">
+      <div class="left-info-2">
+        <p class="main">Products</p>
+        <div class="middle">
+          <p class="mid" id="zero">Inventory</p>
+          <p class="mid" id="one">/</p>
+          <p class="mid" id="two">Products</p>
+        </div>
+      </div>
+      <div class="right-info-2">
+        <div class="add">
+          <p>Add Product</p>
+          <i class="fa-solid fa-plus fa-lg"></i>
+        </div>
+        <div class="edit">
+          <p>Edit</p>
+          <i class="fa-solid fa-edit fa-lg"></i>
+        </div>
+        <div class="delete">
+          <p>Delete</p>
+          <i class="fa-solid fa-trash fa-lg"></i>
+        </div>
+      </div>
+    </div>
+    <i-sidebar></i-sidebar>
+    <div class="main-content">
+      <table>
+        <tr>
+          <th>Image</th>
+          <th>Product Name</th>
+
+          <th>
+            Price
+            <div class="sorting1"></div>
+          </th>
+          <th>
+            Quantity
+            <div class="sorting2"></div>
+          </th>
+          <th>Store</th>
+          <th>Availability</th>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://itechstore.com.np/_ipx/w_1536&f_png/img/product/1225b91e-4141-443e-85a5-d830696d3a19/lenovo-legion-7i-front-facing-left.webp"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Legion 7</td>
+          <td>$400.00</td>
+          <td>400 units</td>
+          <td>Alfreds Futterkiste</td>
+          <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71lPDuOqgKL.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Dualsense Edge</td>
+          <td>$400.00</td>
+          <td>400 units</td>
+          <td>Centro comercial Moctezuma</td>
+          <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1.fit_lim.size_840x473.v1663720055.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Iphone 14 pro</td>
+          <td>$400.00</td>
+          <td>400 units</td>
+          <td>Ernst Handel</td>
+          <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://www.zdnet.com/a/img/resize/a599efb452885d4f668855aea18aae668867a960/2023/02/06/10e9ac75-29ce-4e6c-b2fb-8df48e1e40b0/oneplus-11-never-settle.jpg?auto=webp&fit=crop&height=900&width=1200"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>One Plus 11</td>
+          <td>$400.00</td>
+          <td>400 units</td>
+          <td>Island Trading</td>
+          <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Macbook Air</td>
+          <td>$400.00</td>
+          <td>400 units</td>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://images.macrumors.com/t/wazWGr_XFoku3quJf9Fe1DbKsKk=/1600x1200/smart/article-new/2022/05/airpods-3-purple.jpg"
+              height="50px"
+              width="50px"
+            />
+          </td>
+          <td>Airpods 3</td>
+          <td>$400.00</td>
+          <td>400 units</td>
+          <td>Magazzini Alimentari Riuniti</td>
+          <td>Available&nbsp;&nbsp;<input type="checkbox" /></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // Display body after all resources have loaded
+      window.onload = function () {
+        document.body.style.display = "block";
+      };
+    </script>
+  </body>
+</html>
