@@ -69,11 +69,6 @@ class ISidebar extends HTMLElement {
               <p>Sales</p>
             </div>
 
-            <div class="invoice-container" tabindex="0">
-              <i class="fa-solid fa-file-invoice"></i>
-              <p>Invoice</p>
-            </div>
-
             <div class="bill-container" tabindex="0">
               <i class="fa-solid fa-receipt"></i>
               <p>Bill</p>

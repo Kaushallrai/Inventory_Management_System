@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario | Inventories</title>
+
+    <script type="module" src="../js/general.js"></script>
+    <script>
+      // Load Font Awesome asynchronously
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://kit.fontawesome.com/5341c54a83.js";
+        script.crossOrigin = "anonymous";
+        script.async = true;
+        document.head.appendChild(script);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/inventories.css" />
+    <link rel="stylesheet" href="../css/add_inventory.css" />
+    <style>
+      .inventory-container {
+        background-color: #ececec;
+        margin-left: -15px;
+      }
+      .inventory-container:before {
+        content: " ";
+        width: 6px;
+        height: 100%;
+        background-color: #7e7e7e;
+      }
+      .main-content {
+        margin-top: 140px;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..100,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body style="display: solid">
+    <div class="overlay">
+      <div class="popup">
+        <div class="header-4">
+          <h2>Add User</h2>
+          <button class="popup-close-button">&times;</button>
+        </div>
+        <form>
+          <label for="user-id">Inventory ID:</label>
+          <input type="text" id="inventory-id" name="inventory-id" required />
+          <label for="user-name">Inventory Name:</label>
+          <input
+            type="text"
+            id="inventory-name"
+            name="inventory-name"
+            required
+          />
+
+          <label for="location">Location:</label>
+          <textarea id="location" name="location" rows="3" required></textarea>
+          <label for="photo">Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            required
+          />
+          <button type="submit">Add Inventory</button>
+        </form>
+      </div>
+    </div>
+
+    <i-header></i-header>
+    <div class="page-info-stat-4">
+      <div class="left-info-4">
+        <p class="main">Inventory</p>
+        <div class="middle">
+          <p class="mid" id="zero">Inventory</p>
+          <p class="mid" id="one ">/</p>
+          <p class="mid" id="two">Manage Inventory</p>
+        </div>
+      </div>
+      <div class="right-info-4">
+        <div class="add">
+          <p>Add Inventory</p>
+          <i class="fa-solid fa-plus fa-lg"></i>
+        </div>
+        <div class="edit">
+          <p>Edit</p>
+          <i class="fa-solid fa-edit fa-lg"></i>
+        </div>
+        <div class="delete">
+          <p>Delete</p>
+          <i class="fa-solid fa-trash fa-lg"></i>
+        </div>
+      </div>
+    </div>
+    <i-sidebar></i-sidebar>
+    <div class="main-content">
+      <table>
+        <tr>
+          <th>Inventory</th>
+          <th>Inventory Name</th>
+          <th>Location</th>
+          <th>Inventory ID</th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/50" height="50px" width="50px" />
+          </td>
+          <td>Warehouse 1</td>
+          <td>New York, USA</td>
+          <td>INV-001</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/50" height="50px" width="50px" />
+          </td>
+          <td>Warehouse 2</td>
+          <td>London, UK</td>
+          <td>INV-002</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/50" height="50px" width="50px" />
+          </td>
+          <td>Warehouse 3</td>
+          <td>Sydney, Australia</td>
+          <td>INV-003</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/50" height="50px" width="50px" />
+          </td>
+          <td>Warehouse 4</td>
+          <td>Paris, France</td>
+          <td>INV-004</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://picsum.photos/50" height="50px" width="50px" />
+          </td>
+          <td>Warehouse 5</td>
+          <td>Tokyo, Japan</td>
+          <td>INV-005</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // Display body after all resources have loaded
+      window.onload = function () {
+        document.body.style.display = "block";
+      };
+    </script>
+    <script src="../js/add_product.js"></script>
+    <script src="../js/take_me.js"></script>
+  </body>
+</html>

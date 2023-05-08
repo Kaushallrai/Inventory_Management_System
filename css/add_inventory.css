@@ -5,21 +5,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Darken the background */
-  z-index: 9999; /* Set a high z-index to ensure the overlay is on top of other elements */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
 }
 
 .popup {
-  position: relative; /* Set position to relative to keep it in the center of the screen */
+  position: relative;
   display: none;
   background-color: white;
   border: 1px solid #ececec;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 800px;
-  margin: 0px auto;
-  margin-top: 40px;
+  width: 600px;
+  margin: 50px auto;
   padding: 10px 30px;
-  z-index: 10000; /* Set a higher z-index than the overlay */
+  z-index: 10000;
   border-radius: 10px;
 }
 
@@ -43,18 +42,21 @@
 .popup input[type="text"],
 .popup input[type="number"],
 .popup input[type="file"],
-.popup textarea {
+.popup textarea,
+.popup select {
   width: 100%;
   padding: 5px;
   border: 1px solid #ececec;
 }
 
 .popup button[type="submit"] {
-  background-color: #4caf50;
+  background-color: #2196f3;
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 5px;
+  margin: 20px 0;
 }
 
 .popup button.popup-close-button {
@@ -76,9 +78,9 @@
   transform: translateY(2px);
 }
 
-.header-2 {
+.header-4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  padding: 10px 0 15px 0;
 }

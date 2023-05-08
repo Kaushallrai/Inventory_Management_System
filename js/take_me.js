@@ -14,7 +14,7 @@ function addSidebarClickListeners() {
       window.location.href = "../php/users.html";
     });
     inventoryLink.addEventListener("click", () => {
-      window.location.href = "inventory.html";
+      window.location.href = "../php/inventories.html";
     });
 
     purchaseLink.addEventListener("click", () => {
