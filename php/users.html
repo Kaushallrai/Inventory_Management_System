@@ -79,7 +79,11 @@
           <h2>Add User</h2>
           <button class="popup-close-button">&times;</button>
         </div>
-        <form>
+        <form
+          action="../db/add_user.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
           <label for="user-id">User ID:</label>
           <input type="text" id="user-id" name="user-id" required />
           <label for="user-name">User Name:</label>
@@ -96,13 +100,7 @@
           <label for="address">Address:</label>
           <textarea id="address" name="address" rows="3" required></textarea>
           <label for="photo">Photo:</label>
-          <input
-            type="file"
-            id="photo"
-            name="photo"
-            accept="image/*"
-            required
-          />
+          <input type="file" id="photo" name="photo" accept="image/*" />
           <label for="user-role">User Role:</label>
           <select id="user-role" name="user-role" required>
             <option value="">-- Select Role --</option>
@@ -231,7 +229,7 @@
         document.body.style.display = "block";
       };
     </script>
-    <script src="../js/add_product.js"></script>
+    <script src="../js/add_user.js"></script>
     <script src="../js/take_me.js"></script>
   </body>
 </html>
