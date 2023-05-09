@@ -79,6 +79,7 @@
           <h2>Add User</h2>
           <button class="popup-close-button">&times;</button>
         </div>
+
         <form
           action="../db/add_user.php"
           method="post"
@@ -139,89 +140,8 @@
       </div>
     </div>
     <i-sidebar></i-sidebar>
-    <div class="main-content">
-      <table>
-        <tr>
-          <th>User</th>
-          <th>User Name</th>
 
-          <th>Email Address</th>
-          <th>Phone Number</th>
-          <th>Address</th>
-          <th>Role</th>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://randomuser.me/api/portraits/men/1.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>John Smith</td>
-          <td>john.smith@example.com</td>
-          <td>+1-234-567-8901</td>
-          <td>123 Main St, Anytown, USA</td>
-          <td>Admin</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://randomuser.me/api/portraits/women/2.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Jane Doe</td>
-          <td>jane.doe@example.com</td>
-          <td>+44-123-456-7890</td>
-          <td>456 High St, London, UK</td>
-          <td>Admin</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://randomuser.me/api/portraits/men/3.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Mike Johnson</td>
-          <td>mike.johnson@example.com</td>
-          <td>+61-987-654-321</td>
-          <td>789 King St, Sydney, Australia</td>
-          <td>Admin</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://randomuser.me/api/portraits/women/4.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Emily Wilson</td>
-          <td>emily.wilson@example.com</td>
-          <td>+33-6-12-34-56-78</td>
-          <td>101 Rue de Rivoli, Paris, France</td>
-          <td>Admin</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://randomuser.me/api/portraits/men/5.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>David Lee</td>
-          <td>david.lee@example.com</td>
-          <td>+82-2-123-4567</td>
-          <td>1234 Gangnam-gu, Seoul, South Korea</td>
-          <td>Admin</td>
-        </tr>
-      </table>
-    </div>
+    <div class="main-content" id="userTable"></div>
 
     <script>
       // Display body after all resources have loaded
@@ -229,6 +149,17 @@
         document.body.style.display = "block";
       };
     </script>
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("userTable").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "../db/fetch_users.php", true);
+      xhttp.send();
+    </script>
+
     <script src="../js/add_user.js"></script>
     <script src="../js/take_me.js"></script>
   </body>
