@@ -134,116 +134,18 @@
       </div>
     </div>
     <i-sidebar></i-sidebar>
-    <div class="main-content">
-      <table>
-        <tr>
-          <th>Product</th>
-          <th>Product Name</th>
+    <div class="main-content" id="productTable"></div>
 
-          <th>
-            Price
-            <div class="sorting1"></div>
-          </th>
-          <th>
-            Quantity
-            <div class="sorting2"></div>
-          </th>
-          <th>Supplier</th>
-          <th>Inventory</th>
-          <th>Availability</th>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://itechstore.com.np/_ipx/w_1536&f_png/img/product/1225b91e-4141-443e-85a5-d830696d3a19/lenovo-legion-7i-front-facing-left.webp"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Legion 7</td>
-          <td>$400.00</td>
-          <td>400 units</td>
-          <td>Alfreds Futterkiste</td>
-          <td>Electrocity</td>
-          <td>In Stock</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71lPDuOqgKL.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Dualsense Edge</td>
-          <td>$400.00</td>
-          <td>400 units</td>
-          <td>Centro comercial Moctezuma</td>
-          <td>Electrocity</td>
-          <td>In Stock</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1.fit_lim.size_840x473.v1663720055.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Iphone 14 pro</td>
-          <td>$400.00</td>
-          <td>400 units</td>
-          <td>Ernst Handel</td>
-          <td>Electrocity</td>
-          <td>In Stock</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://www.zdnet.com/a/img/resize/a599efb452885d4f668855aea18aae668867a960/2023/02/06/10e9ac75-29ce-4e6c-b2fb-8df48e1e40b0/oneplus-11-never-settle.jpg?auto=webp&fit=crop&height=900&width=1200"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>One Plus 11</td>
-          <td>$400.00</td>
-          <td>400 units</td>
-          <td>Island Trading</td>
-          <td>Electrocity</td>
-          <td>Out of Stock</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Macbook Air</td>
-          <td>$400.00</td>
-          <td>400 units</td>
-          <td>Laughing Bacchus Winecellars</td>
-          <td>Electrocity</td>
-          <td>Out of Stock</td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="https://images.macrumors.com/t/wazWGr_XFoku3quJf9Fe1DbKsKk=/1600x1200/smart/article-new/2022/05/airpods-3-purple.jpg"
-              height="50px"
-              width="50px"
-            />
-          </td>
-          <td>Airpods 3</td>
-          <td>$400.00</td>
-          <td>400 units</td>
-          <td>Magazzini Alimentari Riuniti</td>
-          <td>Electrocity</td>
-          <td>In Stock</td>
-        </tr>
-      </table>
-    </div>
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("productTable").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "../db/fetch_products.php", true);
+      xhttp.send();
+    </script>
 
     <script>
       // Display body after all resources have loaded
