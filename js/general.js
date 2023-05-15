@@ -81,7 +81,7 @@ class ISidebar extends HTMLElement {
           </div>
           <div class="lower-section">
             <div class="profile-pic">
-              <img src="../profile/kaushal.jpg" alt="" />
+              <img src="./profile/kaushal.jpg" alt="" />
             </div>
             <div class="profile-info">
               <h4>Kaushal Rai</h4>

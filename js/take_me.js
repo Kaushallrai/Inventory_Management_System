@@ -11,7 +11,7 @@ function addSidebarClickListeners() {
       window.location.href = "../index.html";
     });
     usersLink.addEventListener("click", () => {
-      window.location.href = "../php/users.html";
+      window.location.href = "./php/users.html";
     });
 
     purchaseLink.addEventListener("click", () => {

@@ -129,44 +129,23 @@
       </div>
     </div>
     <i-sidebar></i-sidebar>
-    <div class="main-content">
-      <div class="bill-list">
-        <div class="bill-item" onclick="showBill()">
-          <span>1.</span><span>Bill No:</span> 12345 <span>Date:</span> May 10,
-          2023 <span>Customer:</span> John Smith <span>Total:</span> $45.00
-        </div>
+    <div class="main-content" id="billList"></div>
+    <script>
+      // Display body after all resources have loaded
+      window.onload = function () {
+        document.body.style.display = "block";
+      };
 
-        <div class="bill-item" onclick="showBill()">
-          <span>2.</span><span>Bill No:</span> 54321 <span>Date:</span> May 9,
-          2023 <span>Customer:</span> Jane Doe <span>Total:</span> $75.00
-        </div>
-
-        <div class="bill-item" onclick="showBill()">
-          <span>3.</span><span>Bill No:</span> 98765 <span>Date:</span> May 8,
-          2023 <span>Customer:</span> Bob Johnson <span>Total:</span> $20.00
-        </div>
-      </div>
-      <div class="bill-contain">
-        <div class="bill-header">
-          <h1>Bill</h1>
-          <p>Date: May 10, 2023</p>
-        </div>
-        <div class="bill-info">
-          <div><span>Bill No:</span> 12345</div>
-          <div><span>Customer:</span> John Smith</div>
-          <div><span>Address:</span> 123 Main St, Anytown USA</div>
-          <div><span>Email:</span> johnsmith@example.com</div>
-        </div>
-        <div class="bill-items">
-          <div><span>Item 1</span> $10.00</div>
-          <div><span>Item 2</span> $15.00</div>
-          <div><span>Item 3</span> $20.00</div>
-        </div>
-        <div class="bill-total">
-          <span>Total: $45.00</span>
-        </div>
-      </div>
-    </div>
+      // Fetch bill list data from database using AJAX
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("billList").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "../db/fetch_bill.php", true);
+      xhttp.send();
+    </script>
 
     <script>
       // Display body after all resources have loaded

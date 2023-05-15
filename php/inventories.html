@@ -92,14 +92,10 @@
 
           <label for="location">Location:</label>
           <textarea id="location" name="location" rows="3" required></textarea>
-          <label for="photo">Photo:</label>
-          <input
-            type="file"
-            id="photo"
-            name="photo"
-            accept="image/*"
-            required
-          />
+          <label for="total-items">Total Items:</label>
+          <input type="number" id="total-items" name="total-items" required />
+
+          <
           <button type="submit">Add Inventory</button>
         </form>
       </div>
@@ -131,56 +127,25 @@
       </div>
     </div>
     <i-sidebar></i-sidebar>
-    <div class="main-content">
-      <table>
-        <tr>
-          <th>Inventory</th>
-          <th>Inventory Name</th>
-          <th>Location</th>
-          <th>Inventory ID</th>
-        </tr>
-        <tr>
-          <td>
-            <img src="https://picsum.photos/50" height="50px" width="50px" />
-          </td>
-          <td>Warehouse 1</td>
-          <td>New York, USA</td>
-          <td>INV-001</td>
-        </tr>
-        <tr>
-          <td>
-            <img src="https://picsum.photos/50" height="50px" width="50px" />
-          </td>
-          <td>Warehouse 2</td>
-          <td>London, UK</td>
-          <td>INV-002</td>
-        </tr>
-        <tr>
-          <td>
-            <img src="https://picsum.photos/50" height="50px" width="50px" />
-          </td>
-          <td>Warehouse 3</td>
-          <td>Sydney, Australia</td>
-          <td>INV-003</td>
-        </tr>
-        <tr>
-          <td>
-            <img src="https://picsum.photos/50" height="50px" width="50px" />
-          </td>
-          <td>Warehouse 4</td>
-          <td>Paris, France</td>
-          <td>INV-004</td>
-        </tr>
-        <tr>
-          <td>
-            <img src="https://picsum.photos/50" height="50px" width="50px" />
-          </td>
-          <td>Warehouse 5</td>
-          <td>Tokyo, Japan</td>
-          <td>INV-005</td>
-        </tr>
-      </table>
-    </div>
+    <div class="main-content" id="inventoryTable"></div>
+
+    <script>
+      // Display body after all resources have loaded
+      window.onload = function () {
+        document.body.style.display = "block";
+      };
+
+      // Fetch inventory data from database using AJAX
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("inventoryTable").innerHTML =
+            this.responseText;
+        }
+      };
+      xhttp.open("GET", "../db/fetch_inventory.php", true);
+      xhttp.send();
+    </script>
 
     <script>
       // Display body after all resources have loaded

@@ -76,11 +76,7 @@
           <h2>Add Order</h2>
           <button class="popup-close-button">&times;</button>
         </div>
-        <form
-          method="POST"
-          action="add_order.php"
-          enctype="multipart/form-data"
-        >
+        <form method="POST" action="../db/add_order.php">
           <label for="order-id">Order ID:</label>
           <input type="text" id="order-id" name="order_id" required />
           <label for="product-id">Product ID:</label>
@@ -103,7 +99,7 @@
             <option value="Shipped">Shipped</option>
             <option value="Delivered">Delivered</option>
           </select>
-          <button type="submit">Add Order</button>
+          <button type="submit" name="submit">Add Order</button>
         </form>
       </div>
     </div>
@@ -133,70 +129,24 @@
       </div>
     </div>
     <i-sidebar></i-sidebar>
-    <div class="main-content">
-      <table>
-        <tr>
-          <th>Order ID</th>
-          <th>Product</th>
-          <th>Date</th>
-          <th>Customer</th>
-          <th>Destination</th>
-          <th>Quantity</th>
-          <th>Total Price</th>
-          <th>Status</th>
-        </tr>
-        <tr>
-          <td>12345</td>
-          <td>Smartphone</td>
-          <td>2023-05-09</td>
-          <td>John Doe</td>
-          <td>123 Main St, Anytown USA</td>
-          <td>2</td>
-          <td>$800.00</td>
-          <td>Shipped</td>
-        </tr>
-        <tr>
-          <td>67890</td>
-          <td>Laptop</td>
-          <td>2023-05-08</td>
-          <td>Jane Smith</td>
-          <td>456 Oak St, Anytown USA</td>
-          <td>1</td>
-          <td>$1200.00</td>
-          <td>Delivered</td>
-        </tr>
-        <tr>
-          <td>24680</td>
-          <td>Tablet</td>
-          <td>2023-05-07</td>
-          <td>Bob Johnson</td>
-          <td>789 Elm St, Anytown USA</td>
-          <td>3</td>
-          <td>$1200.00</td>
-          <td>In Transit</td>
-        </tr>
-        <tr>
-          <td>13579</td>
-          <td>Headphones</td>
-          <td>2023-05-06</td>
-          <td>Sara Lee</td>
-          <td>321 Pine St, Anytown USA</td>
-          <td>1</td>
-          <td>$200.00</td>
-          <td>Out of Stock</td>
-        </tr>
-        <tr>
-          <td>11223</td>
-          <td>Monitor</td>
-          <td>2023-05-05</td>
-          <td>Tom Brown</td>
-          <td>555 Maple St, Anytown USA</td>
-          <td>2</td>
-          <td>$800.00</td>
-          <td>Processing</td>
-        </tr>
-      </table>
-    </div>
+    <div class="main-content" id="salesTable"></div>
+
+    <script>
+      // Display body after all resources have loaded
+      window.onload = function () {
+        document.body.style.display = "block";
+      };
+
+      // Fetch sales data from database using AJAX
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("salesTable").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "../db/fetch_sales.php", true);
+      xhttp.send();
+    </script>
 
     <script>
       // Display body after all resources have loaded
@@ -204,7 +154,7 @@
         document.body.style.display = "block";
       };
     </script>
-    <script src="../js/add_product.js"></script>
+    <script src="../js/add_order.js"></script>
     <script src="../js/take_me.js"></script>
   </body>
 </html>

@@ -76,7 +76,7 @@
           <h2>Add Product</h2>
           <button class="popup-close-button">&times;</button>
         </div>
-        <form>
+        <form action="../db/add_product.php" method="post">
           <label for="product-id">Product ID:</label>
           <input type="text" id="product-id" name="product-id" required />
           <label for="product-name">Product Name:</label>
@@ -87,14 +87,7 @@
           <input type="number" id="price" name="price" step="0.01" required />
           <label for="quantity">Quantity:</label>
           <input type="number" id="quantity" name="quantity" required />
-          <label for="photo">Photo:</label>
-          <input
-            type="file"
-            id="photo"
-            name="photo"
-            accept="image/*"
-            required
-          />
+
           <label for="supplier-name">Supplier Name:</label>
           <input type="text" id="supplier-name" name="supplier-name" required />
           <label for="inventory-name">Inventory Name:</label>
@@ -104,7 +97,7 @@
             name="inventory-name"
             required
           />
-          <button type="submit">Add Product</button>
+          <button type="submit" name="submit">Add Product</button>
         </form>
       </div>
     </div>

@@ -116,11 +116,14 @@
   margin-bottom: 0px;
   color: #4c4c4c;
 }
+
 .bill-list {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
+  /* width: 80%; */
+  margin-top: 20px;
+  left: 0;
 }
 
 .bill-item {
@@ -128,55 +131,27 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #eee;
-  cursor: pointer;
-}
-
-.bill-contain {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #fff;
   border: 1px solid #ccc;
-}
-
-.bill-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bill-info {
-  margin-top: 20px;
-}
-
-.bill-info div {
+  border-radius: 5px;
+  cursor: pointer;
   margin-bottom: 10px;
+  width: 600px;
 }
 
-.bill-info span {
+.bill-item:hover {
+  background-color: #f2f2f2;
+}
+
+.bill-item span:first-child {
   font-weight: bold;
+  margin-right: 10px;
 }
 
-.bill-items {
-  margin-top: 20px;
+.bill-item span:nth-child(2) {
+  margin-right: 10px;
 }
 
-.bill-items div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.bill-items span:first-child {
-  flex: 1;
-}
-
-.bill-total {
-  margin-top: 20px;
-  text-align: right;
-}
-
-.bill-total span {
+.bill-item span:last-child {
   font-weight: bold;
 }
 

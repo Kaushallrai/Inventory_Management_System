@@ -23,15 +23,18 @@ if(empty($email) && empty($password)) {
     exit();
   }
   else{
-    $sql="SELECT * FROM users WHERE email='$email' AND password='$password'";
-    $result=mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result)===1){
-      $row=mysqli_fetch_assoc($result);
-      if($row['Email']===$email && $row['Password']===$password){
-        $_SESSION['email']=$row['Email'];
-        $_SESSION['password']=$row['Password'];
+    $stmt = $conn->prepare("SELECT * FROM validate WHERE email=? AND password=?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($result->num_rows === 1){
+      $row = $result->fetch_assoc();
+      if($row['email']===$email && $row['password']===$password){
+        $_SESSION['email']=$row['email'];
+        $_SESSION['password']=$row['password'];
         $_SESSION['id']=$row['UserID'];
-sleep(2);
+        sleep(2);
         header("Location: ../index.html");
         exit();
       }
