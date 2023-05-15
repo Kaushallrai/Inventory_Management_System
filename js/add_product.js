@@ -22,5 +22,5 @@ form.addEventListener("submit", (event) => {
   overlay.style.display = "none";
 
   // Clear the form
-  form.reset();
+  // form.reset();
 });
