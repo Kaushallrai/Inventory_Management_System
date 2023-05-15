@@ -1,33 +1,33 @@
 <?php
-// Establish a connection to the database
+// Connect to database
 $conn = mysqli_connect("localhost", "myadmin", "myadmin", "inventory_management_system");
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch the bill list from the "bills" table
-$sql = "SELECT id, bill_id, date, customer, total_price FROM bills";
-$result = $conn->query($sql);
+$query = "SELECT * FROM bills";
+$result = mysqli_query($conn, $query);
 
-// Check if there are any results
-if ($result->num_rows > 0) {
-
-  while($row = $result->fetch_assoc()) {
-    echo '<div class="bill-item" onclick="showBill(' . $row['id'] . ')">';
-    echo '<span>' . $row['id'] . '.</span>';
-    echo '<span>Bill No:</span> ' . $row['bill_id'] . ' ';
-    echo '<span>Date:</span> ' . $row['date'] . ' ';
-    echo '<span>Customer:</span> ' . $row['customer'] . ' ';
-    echo '<span>Total:</span> $' . $row['total_price'];
+ echo '<h1>Bills</h1>';
+// Display bill data
+while ($row = mysqli_fetch_assoc($result)) {
+ 
+    echo '<div class="bill">';
+    echo '<p>Bill ID: ' . $row['bill_id'] . '</p>';
+    echo '<p>Product ID: ' . $row['product_id'] . '</p>';
+    echo '<p>Product Name: ' . $row['product_name'] . '</p>';
+    echo '<p>Date: ' . $row['date'] . '</p>';
+    echo '<p>Customer: ' . $row['customer'] . '</p>';
+    echo '<p>Destination: ' . $row['destination'] . '</p>';
+    echo '<p>Quantity: ' . $row['quantity'] . '</p>';
+    echo '<p>Total Price: ' . $row['total_price'] . '</p>';
+    echo '<p>Status: ' . $row['status'] . '</p>';
+    echo '<button onclick="printBill()">Print</button>';
     echo '</div>';
-  }
-
-} else {
-  echo "No results found.";
 }
 
 // Close the database connection
-$conn->close();
+mysqli_close($conn);
 ?>

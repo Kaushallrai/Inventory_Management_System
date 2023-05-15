@@ -116,52 +116,103 @@
   margin-bottom: 0px;
   color: #4c4c4c;
 }
-
-.bill-list {
-  display: flex;
-  flex-direction: column;
-
-  /* width: 80%; */
-  margin-top: 20px;
-  left: 0;
+#bill-list {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: fit-content;
 }
 
-.bill-item {
+#bill-list h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+#bill-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#bill-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#bill-list li:hover {
+  background-color: #f9f9f9;
+}
+
+#bill-list li strong {
+  font-weight: bold;
+}
+.invoice {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+/* Rest of the CSS styles remain the same */
+
+.invoice-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.invoice-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.invoice-info {
+  display: flex;
+  align-items: center;
+}
+
+.invoice-info span {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.invoice-item {
   margin-bottom: 10px;
-  width: 600px;
+  font-size: 16px;
 }
 
-.bill-item:hover {
-  background-color: #f2f2f2;
-}
-
-.bill-item span:first-child {
+.invoice-item span {
   font-weight: bold;
-  margin-right: 10px;
+  color: #333;
 }
 
-.bill-item span:nth-child(2) {
-  margin-right: 10px;
+.invoice-total {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
 }
 
-.bill-item span:last-child {
-  font-weight: bold;
+#print-button {
+  display: block;
+  margin-left: 0;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.bill-container {
-  background-color: #ececec !important;
-  margin-left: -15px !important;
-}
-.bill-container:before {
-  content: " ";
-  width: 6px;
-  height: 100%;
-  background-color: #7e7e7e;
+#print-button:hover {
+  background-color: #45a049;
 }

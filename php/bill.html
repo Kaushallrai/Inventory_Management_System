@@ -129,23 +129,148 @@
       </div>
     </div>
     <i-sidebar></i-sidebar>
-    <div class="main-content" id="billList"></div>
+    <div class="main-content">
+      <div id="bill-list">
+        <h2>Bill List</h2>
+        <ul>
+          <li onclick="showFullBill(1)">
+            <strong>Bill ID:</strong> 1<br />
+            <strong>Date:</strong> 2023-04-18<br />
+            <strong>Customer Name:</strong> Jane Smith<br />
+
+            <strong>Total Price:</strong> $350<br />
+          </li>
+          <li onclick="showFullBill(2)">
+            <strong>Bill ID:</strong> 2<br />
+
+            <strong>Date:</strong> 2023-05-03<br />
+            <strong>Customer Name:</strong> Michael Johnson<br />
+
+            <strong>Total Price:</strong> $750<br />
+          </li>
+          <li onclick="showFullBill(3)">
+            <strong>Bill ID:</strong> 3<br />
+
+            <strong>Date:</strong> 2023-05-08<br />
+            <strong>Customer Name:</strong> Sarah Davis<br />
+
+            <strong>Total Price:</strong> $200<br />
+          </li>
+          <li onclick="showFullBill(4)">
+            <strong>Bill ID:</strong> 4<br />
+
+            <strong>Date:</strong> 2023-05-10<br />
+            <strong>Customer Name:</strong> Robert Wilson<br />
+
+            <strong>Total Price:</strong> $450<br />
+          </li>
+          <li onclick="showFullBill(5)">
+            <strong>Bill ID:</strong> 5<br />
+
+            <strong>Date:</strong> 2023-04-29<br />
+            <strong>Customer Name:</strong> Emily Thompson<br />
+
+            <strong>Total Price:</strong> $600<br />
+          </li>
+          <li onclick="showFullBill(6)">
+            <strong>Bill ID:</strong> 6<br />
+
+            <strong>Date:</strong> 2023-05-12<br />
+            <strong>Customer Name:</strong> David Anderson<br />
+
+            <strong>Total Price:</strong> $300<br />
+          </li>
+          <li onclick="showFullBill(7)">
+            <strong>Bill ID:</strong> 7<br />
+
+            <strong>Date:</strong> 2023-04-22<br />
+            <strong>Customer Name:</strong> Jessica Wilson<br />
+
+            <strong>Total Price:</strong> $900<br />
+          </li>
+          <li onclick="showFullBill(8)">
+            <strong>Bill ID:</strong> 8<br />
+
+            <strong>Date:</strong> 2023-05-05<br />
+            <strong>Customer Name:</strong> Christopher Brown<br />
+
+            <strong>Total Price:</strong> $250<br />
+          </li>
+          <li onclick="showFullBill(9)">
+            <strong>Bill ID:</strong> 9<br />
+
+            <strong>Date:</strong> 2023-04-30<br />
+            <strong>Customer Name:</strong> Olivia Martinez<br />
+
+            <strong>Total Price:</strong> $400<br />
+          </li>
+          <li onclick="showFullBill(10)">
+            <strong>Bill ID:</strong> 10<br />
+
+            <strong>Date:</strong> 2023-05-14<br />
+            <strong>Customer Name:</strong> Daniel Johnson<br />
+
+            <strong>Total Price:</strong> $550<br />
+          </li>
+
+          <!-- Add more bill items here -->
+        </ul>
+      </div>
+
+      <div class="invoice">
+        <div class="invoice-header">
+          <h2>Invoice Bill</h2>
+          <div class="invoice-info">
+            <span>Bill ID:</span> <span id="bill-id">12345</span>
+            <span>Date:</span> <span id="date">2023-05-15</span>
+          </div>
+        </div>
+        <div class="invoice-item">
+          <span>Customer Name:</span> <span id="customer-name">John Doe</span>
+        </div>
+        <div class="invoice-item">
+          <span>Product Name:</span> <span id="product-name">Iphone</span
+          ><span>&nbsp;/&nbsp;</span> <span id="product-name">TV</span
+          ><span>&nbsp;/&nbsp;</span>
+          <span id="product-name">Washing Machine</span
+          ><span>&nbsp;/&nbsp;</span> <span id="product-name">Remote</span
+          ><span>&nbsp;/&nbsp;</span>
+          <span id="product-name">AC</span>
+        </div>
+        <div class="invoice-item">
+          <span>Total Products:</span> <span id="total-products">5</span>
+        </div>
+        <div class="invoice-item">
+          <span>Destination:</span> <span id="destination">New York</span>
+        </div>
+        <div class="invoice-item">
+          <span>Status:</span> <span id="status">Paid</span>
+        </div>
+        <div class="invoice-total">
+          <span>Total Price:</span> <span id="total-price">$500</span>
+        </div>
+
+        <button id="print-button" onclick="printInvoice()">Print Bill</button>
+      </div>
+    </div>
     <script>
       // Display body after all resources have loaded
       window.onload = function () {
         document.body.style.display = "block";
       };
 
-      // Fetch bill list data from database using AJAX
+      // Fetch sales data from database using AJAX
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("billList").innerHTML = this.responseText;
+          document.getElementById("bill-containerz").innerHTML =
+            this.responseText;
         }
       };
       xhttp.open("GET", "../db/fetch_bill.php", true);
       xhttp.send();
     </script>
+    <!-- Place this code after the HTML content -->
 
     <script>
       // Display body after all resources have loaded
