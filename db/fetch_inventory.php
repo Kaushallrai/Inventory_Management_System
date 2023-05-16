@@ -1,6 +1,6 @@
 <?php
 // Connect to database
-$conn = mysqli_connect("localhost", "myadmin", "myadmin", "inventory_management_system");
+$conn = mysqli_connect("localhost", "root", "", "inventory_management_system");
 
 // Check connection
 if ($conn->connect_error) {

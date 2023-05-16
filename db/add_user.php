@@ -1,5 +1,5 @@
 <?php
-  $conn = mysqli_connect("localhost", "myadmin", "myadmin", "inventory_management_system");
+  $conn = mysqli_connect("localhost", "root", "", "inventory_management_system");
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   } else {
@@ -24,7 +24,7 @@
     }
 
     // Connect to the database
-    $conn = mysqli_connect("localhost", "myadmin", "myadmin", "inventory_management_system");
+    $conn = mysqli_connect("localhost", "root", "", "inventory_management_system");
 
     // Prepare the SQL statement
     $stmt = mysqli_prepare($conn, "INSERT INTO users (user_id, user_name, email_address, phone_number, address, photo, user_role) VALUES (?, ?, ?, ?, ?, ?, ?)");

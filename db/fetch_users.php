@@ -1,5 +1,5 @@
 <?php
-  $conn = mysqli_connect("localhost", "myadmin", "myadmin", "inventory_management_system");
+  $conn = mysqli_connect("localhost", "root", "", "inventory_management_system");
 
 // check connection
 if ($conn->connect_error) {
@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
 
   while($row = $result->fetch_assoc()) {
     echo "<tr>";
-    echo "<td>" . $row['photo'] . "</td>";
+    echo "<td>". '<img src = "data:image/jpg;base64,' . base64_encode($row['photo']) . '" width = "50px" height = "50px"/>'. "</td>";
     echo "<td>" . $row['user_name'] . "</td>";
     echo "<td>" . $row['email_address'] . "</td>";
     echo "<td>" . $row['phone_number'] . "</td>";
